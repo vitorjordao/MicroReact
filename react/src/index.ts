@@ -1,6 +1,7 @@
 interface Props {
-    className: string;
-    children: ReactNode[] | string[];
+    className?: string;
+    style?: CSSStyleDeclaration;
+    children: Array<ReactNode | string>;
 }
 
 export interface ReactNode { 

@@ -1,7 +1,7 @@
 import { ReactNode } from 'nano-react';
 
 interface ReactDOMType {
-    render: Function;
+    render: (nodeReact: ReactNode, $root: HTMLElement) => void;
     reactNodeToHTML: Function;
 }
 
@@ -22,9 +22,6 @@ function reactNodeToHTML(nodeReact: ReactNode) {
 let ReactDOM: ReactDOMType = {
     reactNodeToHTML,
     render: (nodeReact: ReactNode, $root: HTMLElement) => {
-        console.log(
-            JSON.stringify(nodeReact, null, 2)
-        );
 
         const tree = reactNodeToHTML(nodeReact);
 

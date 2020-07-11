@@ -12,11 +12,11 @@
     "dist/index.js"
   ],
   "dependencies": {
-    "nano-react": "0.1.2"
+    "nano-react": "file:../react"
   },
   "scripts": {
     "build": "tsc --declaration --allowJs",
-    "test": ""
+    "test": "jest"
   },
   "browserslist": {
     "production": [
@@ -31,8 +31,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@types/jest": "^26.0.4",
     "@types/node": "^14.0.19",
+    "jest": "^26.1.0",
     "source-map-loader": "^1.0.1",
     "ts-loader": "^8.0.0",
     "tsc": "^1.20150623.0",
