@@ -1,0 +1,41 @@
+{
+  "name": "nano-react-dom",
+  "version": "0.1.2",
+  "author": {
+    "name": "Vitor Jordão"
+  },
+  "private": false,
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.js"
+  ],
+  "dependencies": {
+    "nano-react": "0.1.2"
+  },
+  "scripts": {
+    "build": "tsc --declaration --allowJs",
+    "test": ""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.19",
+    "source-map-loader": "^1.0.1",
+    "ts-loader": "^8.0.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.9.6"
+  }
+}

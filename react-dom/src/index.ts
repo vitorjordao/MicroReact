@@ -1,4 +1,4 @@
-import { ReactNode } from './react';
+import { ReactNode } from 'nano-react';
 
 interface ReactDOMType {
     render: Function;
