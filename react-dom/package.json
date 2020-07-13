@@ -1,6 +1,6 @@
 {
   "name": "nano-react-dom",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "author": {
     "name": "Vitor Jordão"
   },
@@ -12,11 +12,12 @@
     "dist/index.js"
   ],
   "dependencies": {
-    "nano-react": "file:../react"
+    "nano-react": "0.2.1"
   },
   "scripts": {
     "build": "tsc --declaration --allowJs",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "tsc --declaration --allowJs"
   },
   "browserslist": {
     "production": [

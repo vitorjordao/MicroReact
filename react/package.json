@@ -1,6 +1,6 @@
 {
   "name": "nano-react",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "author": {
     "name": "Vitor Jordão"
   },
@@ -14,7 +14,8 @@
   "dependencies": {},
   "scripts": {
     "build": "tsc --declaration --allowJs",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "tsc --declaration --allowJs"
   },
   "browserslist": {
     "production": [

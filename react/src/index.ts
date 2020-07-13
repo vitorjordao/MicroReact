@@ -1,6 +1,6 @@
 interface Props {
     className?: string;
-    style?: CSSStyleDeclaration;
+    style?: Partial<CSSStyleDeclaration>;
     children: Array<ReactNode | string>;
 }
 

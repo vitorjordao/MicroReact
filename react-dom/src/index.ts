@@ -2,11 +2,17 @@ import { ReactNode } from 'nano-react';
 
 interface ReactDOMType {
     render: (nodeReact: ReactNode, $root: HTMLElement) => void;
-    reactNodeToHTML: Function;
 }
 
-function reactNodeToHTML(nodeReact: ReactNode) {
+function reactNodeToHTML(nodeReact: ReactNode): HTMLElement {
     let rootElement = document.createElement(nodeReact.tagName);
+
+    for(let styleTag in nodeReact.props.style) {
+        (rootElement.style as { [key: string]: any })[styleTag] = (nodeReact.props.style as { [key: string]: any })[styleTag];
+    }
+
+    if(nodeReact.props.className)
+        rootElement.className = nodeReact.props.className;
 
     nodeReact.props.children.forEach((elementChildren: ReactNode | string) => {
         if(typeof elementChildren === 'string') {
@@ -20,7 +26,6 @@ function reactNodeToHTML(nodeReact: ReactNode) {
 }
 
 let ReactDOM: ReactDOMType = {
-    reactNodeToHTML,
     render: (nodeReact: ReactNode, $root: HTMLElement) => {
 
         const tree = reactNodeToHTML(nodeReact);
